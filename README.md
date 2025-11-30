@@ -153,5 +153,5 @@ The system uses SQLite for persistent storage with the following main tables:
 ## NOTE!!
 
 1. **Root Privileges**: Network packet capture requires root/sudo access.
-2.**Alert Monitoring**: Regularly review the alert log for security events
+2.**Alert Monitoring**: Regularly review the alert log for security events.
 
