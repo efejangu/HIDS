@@ -1,0 +1,509 @@
+/* HIDS Textual CSS - Burp Suite-inspired styling */
+
+/* Global Screen Styles */
+Screen {
+    background: $surface;
+    layers: base overlay;
+}
+
+/* Header and Footer */
+Header {
+    dock: top;
+    height: 3;
+    background: $accent;
+    color: $text;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: $accent-darken-2;
+}
+
+/* TabbedContent Styling */
+TabbedContent {
+    height: 100%;
+}
+
+TabbedContent > ContentSwitcher {
+    height: 1fr;
+}
+
+Tabs {
+    background: $panel;
+    border-bottom: solid $accent;
+}
+
+Tab {
+    background: $panel;
+    color: $text-muted;
+    text-style: bold;
+}
+
+Tab:hover {
+    background: $accent 30%;
+    color: $text;
+}
+
+Tab.-active {
+    background: $accent;
+    color: $text;
+}
+
+/* Dashboard Specific Styles */
+#dashboard-grid {
+    layout: grid;
+    grid-size: 2 2;
+    grid-columns: 1fr 2fr;
+    grid-rows: auto 1fr;
+    grid-gutter: 1 2;
+    height: 100%;
+    padding: 1;
+}
+
+.dashboard-panel {
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+    height: 100%;
+}
+
+#status-panel {
+    row-span: 2;
+}
+
+#alerts-panel {
+    column-span: 1;
+}
+
+.panel-title {
+    text-style: bold;
+    color: $accent;
+    background: $panel;
+    padding: 0 1;
+    margin-bottom: 1;
+}
+
+.section-title {
+    text-style: bold;
+    color: $accent;
+    padding: 1;
+    background: $panel-darken-1;
+}
+
+/* File Monitor Layout */
+#control-panel {
+    dock: top;
+    height: 5;
+    background: $panel;
+    border-bottom: solid $accent;
+    padding: 1;
+    align: center middle;
+}
+
+.control-input {
+    width: 60%;
+    margin-right: 1;
+}
+
+#file-monitor-content {
+    layout: horizontal;
+    height: 100%;
+    padding: 1;
+}
+
+.left-panel {
+    width: 25%;
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+    margin-right: 1;
+}
+
+.right-panel {
+    width: 75%;
+}
+
+.main-panel {
+    width: 70%;
+    margin-right: 1;
+}
+
+/* Directory List Styling */
+#directory-list {
+    margin-top: 1;
+    padding: 1;
+    background: $panel-darken-1;
+    border: solid $accent-darken-1;
+    height: auto;
+}
+
+#dir-list-panel {
+    height: 100%;
+}
+
+/* DataTable Styles */
+DataTable {
+    height: 1fr;
+    border: solid $accent;
+    background: $panel;
+}
+
+DataTable > .datatable--header {
+    background: $accent;
+    color: $text;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: $accent 50%;
+}
+
+DataTable > .datatable--hover {
+    background: $accent 20%;
+}
+
+DataTable > .datatable--fixed {
+    background: $panel-darken-1;
+}
+
+DataTable > .datatable--even-row {
+    background: $panel;
+}
+
+DataTable > .datatable--odd-row {
+    background: $panel-darken-1;
+}
+
+/* File Monitor Table Specific */
+#file-monitor-table {
+    min-height: 20;
+    margin-bottom: 1;
+}
+
+/* Network Monitor Table */
+#network-traffic-table {
+    height: 100%;
+}
+
+/* Details Panel */
+#details-panel {
+    height: 15;
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+    margin-top: 1;
+}
+
+.details-display {
+    padding: 1;
+    color: $text;
+}
+
+#threat-details-panel {
+    width: 30%;
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+}
+
+#threat-details-content {
+    padding: 1;
+}
+
+/* Button Styling */
+Button {
+    min-width: 16;
+    margin: 0 1;
+}
+
+Button:hover {
+    text-style: bold;
+}
+
+Button.-primary {
+    background: $primary;
+}
+
+Button.-success {
+    background: $success;
+}
+
+Button.-warning {
+    background: $warning;
+}
+
+Button.-error {
+    background: $error;
+}
+
+/* Input Styling */
+Input {
+    border: solid $accent;
+    background: $panel-darken-1;
+}
+
+Input:focus {
+    border: solid $accent-lighten-1;
+}
+
+/* Network Controls */
+#network-controls {
+    dock: top;
+    height: 7;
+    background: $panel;
+    border-bottom: solid $accent;
+    padding: 1;
+    align: center middle;
+}
+
+#network-stats-panel {
+    width: 30%;
+    border: solid $primary;
+    background: $panel-darken-1;
+    padding: 1;
+    margin-left: 2;
+}
+
+#network-monitor-content {
+    layout: horizontal;
+    height: 100%;
+    padding: 1;
+}
+
+/* Activity Log */
+#activity-log {
+    padding: 1;
+    margin-top: 1;
+}
+
+/* Status Indicators */
+.status-active {
+    color: $success;
+    text-style: bold;
+}
+
+.status-modified {
+    color: $warning;
+    text-style: bold;
+}
+
+.status-error {
+    color: $error;
+    text-style: bold;
+}
+
+.status-paused {
+    color: $primary;
+    text-style: bold;
+}
+
+/* Alerts Table */
+#alerts-table {
+    height: 100%;
+}
+
+/* Process Monitor Layout */
+#process-search-panel {
+    dock: top;
+    height: 4;
+    background: $panel;
+    border-bottom: solid $accent;
+    padding: 1;
+    align: center middle;
+}
+
+#process-control-panel {
+    dock: top;
+    height: 5;
+    background: $panel;
+    border-bottom: solid $accent;
+    padding: 1;
+    align: center middle;
+}
+
+.control-label {
+    margin: 0 1;
+    color: $text-muted;
+    text-style: bold;
+}
+
+.interval-input {
+    width: 8;
+    margin: 0 1;
+}
+
+#process-monitor-content {
+    layout: horizontal;
+    height: 100%;
+    padding: 1;
+}
+
+/* Process Monitor Table Specific */
+#process-monitor-table {
+    min-height: 20;
+    margin-bottom: 1;
+}
+
+/* Process Details Panel */
+#process-details-panel {
+    width: 35%;
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+    margin-left: 1;
+}
+
+#process-details-content {
+    padding: 1;
+    color: $text;
+    overflow-y: auto;
+}
+
+/* Process Status Indicators */
+.process-status-running {
+    color: $success;
+    text-style: bold;
+}
+
+.process-status-suspended {
+    color: $warning;
+    text-style: bold;
+}
+
+.process-status-suspicious {
+    color: $error;
+    text-style: bold;
+}
+
+.process-status-malicious {
+    color: $error;
+    text-style: bold;
+    background: $error 20%;
+}
+
+/* Risk Score Colors */
+.risk-score-low {
+    color: $success;
+}
+
+.risk-score-medium {
+    color: $warning;
+}
+
+.risk-score-high {
+    color: $error;
+    text-style: bold;
+}
+
+/* Search Panel Elements */
+#process-search-input {
+    width: 50%;
+    margin-right: 1;
+}
+
+#regex-checkbox, #fuzzy-checkbox {
+    margin: 0 1;
+}
+
+/* Scrollbars - Textual handles these automatically */
+
+/* Log Viewer Styles */
+#log-viewer-controls {
+    dock: top;
+    height: auto;
+    background: $panel;
+    border-bottom: solid $accent;
+    padding: 1;
+}
+
+#log-file-selector-panel {
+    height: 5;
+    padding: 1;
+    align: center middle;
+}
+
+#log-search-filter-panel {
+    height: 4;
+    padding: 1;
+    align: center middle;
+}
+
+#log-level-filter-panel {
+    height: 4;
+    padding: 1;
+    align: center middle;
+}
+
+#log-control-actions-panel {
+    height: 4;
+    padding: 1;
+    align: center middle;
+}
+
+#log-viewer-content {
+    layout: horizontal;
+    height: 100%;
+    padding: 1;
+}
+
+#log-main-panel {
+    width: 70%;
+    margin-right: 1;
+}
+
+#log-sidebar {
+    width: 30%;
+}
+
+/* Log viewer table */
+#log-viewer-table {
+    min-height: 20;
+    height: 1fr;
+}
+
+/* Log stats panel */
+#log-stats-panel {
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+    margin-bottom: 1;
+    height: auto;
+}
+
+/* Log entry details panel */
+#log-entry-details-panel {
+    border: solid $primary;
+    background: $panel;
+    padding: 1;
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#entry-details-content {
+    padding: 1;
+    color: $text;
+}
+
+/* File info display */
+#file-info-display {
+    margin-left: 1;
+    color: $text-muted;
+}
+
+/* Log file selector */
+#log-file-select {
+    width: 40%;
+    margin: 0 1;
+}
+
+/* Search input */
+#log-search-input {
+    width: 40%;
+    margin: 0 1;
+}
+
+/* Stats content */
+#stats-content {
+    padding: 1;
+}

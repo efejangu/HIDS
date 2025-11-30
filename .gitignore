@@ -1,0 +1,49 @@
+# Environment variables and secrets
+.env
+
+# Database files
+*.db
+tests/HIDS.db
+HIDS/UI/HIDS.db
+
+# Log directories and files
+app_log/
+HIDS/app_log/
+HIDS/UI/app_log/
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Testing
+.pytest_cache/
+tests/.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.egg
