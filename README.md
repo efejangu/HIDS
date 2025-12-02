@@ -143,7 +143,7 @@ The system uses SQLite for persistent storage with the following main tables:
 
 ## ⚠️ Current Limitations
 
-- **Network Monitoring**: The [`network_mon.py`](HIDS/netmon/network_mon.py) module is currently incomplete. While packet capture functionality exists in the UI layer, the core network analysis logic is not yet implemented.
+- **Network Monitoring**: The [`network_mon.py`](HIDS/netmon/network_mon.py) module is currently incomplete. While packet capture functionality exists in the UI layer, the core network analysis logic is limited to identifying malicious IPs.
 
 - **VirusTotal Rate Limits**: Free tier API keys have rate limits (4 requests/minute). The system implements rate limiting but may experience delays.
 
